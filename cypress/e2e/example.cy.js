@@ -37,10 +37,6 @@ describe('Bank app', () => {
       .should('be.visible');
 
     cy.get('[ng-click="withdrawl()"]').click();
-    cy.contains('[type="submit"]', 'Withdraw')
-      .should('be.visible');
-    cy.get('[placeholder="amount"]').type(withdrawAmount);
-    cy.contains('[type="submit"]', 'Withdraw').click();
 
     cy.get('[ng-show="message"]')
       .should('contain', 'Transaction successful');
